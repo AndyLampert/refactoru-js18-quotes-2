@@ -35,5 +35,12 @@ $(document).on('ready', function() {
 				return false;
 		});
 		console.log(filterGames);
+
+		// loop through the full array of games (all items in .game-list)
+		for(var i=0;i<filterGames.length;i++){
+			// logs all games that DON't have the same title as the one clicked on
+			console.log( $(filterGames[i]) );
+			$(filterGames[i]).hide();
+		}
 	});
 });
